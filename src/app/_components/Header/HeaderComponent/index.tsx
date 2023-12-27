@@ -4,6 +4,8 @@ import Link from 'next/link'
 
 import { Header } from '../../../../payload/payload-types'
 import { Gutter } from '../../Gutter'
+import { HeaderNav } from '../Nav'
+import MobileNav from './MobileNav'
 
 import classes from './index.module.scss'
 
@@ -14,6 +16,8 @@ const HeaderComponent = ({ header }: { header: Header }) => {
         <Link href="/">
           <Image src="/logo-black.svg" alt="logo" width={170} height={50}></Image>
         </Link>
+        <HeaderNav header={header} />
+        <MobileNav header={header} />
       </Gutter>
     </nav>
   )
