@@ -11,7 +11,7 @@ interface IContextType {
 
 export const INITIAL_FILTER_DATA = {
   categoryFilters: [],
-  setCategoryFilters: () => {},
+  setCategoryFilters: () => [],
   sort: '',
   setSort: () => '',
 }
@@ -26,9 +26,9 @@ export const FilterProvider = ({ children }: { children: React.ReactNode }) => {
     <FilterContext.Provider
       value={{
         categoryFilters,
-        setCategoryFilters: () => [],
+        setCategoryFilters,
         sort,
-        setSort: () => '',
+        setSort,
       }}
     >
       {children}
